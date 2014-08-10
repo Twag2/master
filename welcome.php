@@ -17,10 +17,8 @@
 </div>
 <div id="footer">
     <div class="container">
-        <p>
-        <button type="button" onClick="location.href='signup.php'" class="btn btn-lg btn-primary">Регистрация</button>
-        <button type="button" class="btn btn-lg btn-primary">Войти</button>
-        </p>
+        <button type="button" onClick="location.href='signup.php'" class="btn btn-lg navbar-btn btn-primary">Регистрация</button>
+        <button type="button" class="btn btn-lg navbar-btn btn-primary">Войти</button>
     </div>
 </div>
 </body>
