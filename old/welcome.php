@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome - Twag2</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="welcome.css" rel="stylesheet">
+    <link href="../css/welcome.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
 

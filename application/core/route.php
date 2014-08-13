@@ -4,24 +4,24 @@ class Route
 {
     static function start()
     {
-        $controller_name = 'Main';
+        $controller_name = 'main';
         $action_name = 'index';
 
         $routes = explode('/', $_SERVER['REQUEST_URI']);
 
-        if(!empty($routes[1]))
-        {
-            $controller_name = $routes[1];
-        }
-
         if(!empty($routes[2]))
         {
-            $action_name = $routes[2];
+            $controller_name = $routes[2];
+        }
+
+        if(!empty($routes[3]))
+        {
+           $action_name = $routes[3];
         }
 
         $model_name = 'Model_'.$controller_name;
         $controller_name = 'Controller_'.$controller_name;
-        $action_name = 'action'.$action_name;
+        $action_name = 'action_'.$action_name;
 
 
         $model_file = strtolower($model_name).'.php';
@@ -39,11 +39,12 @@ class Route
         }
         else
         {
-            Route::ErrorPage404();
+            echo "File ".$controller_file." is not found!";
+            //Route::ErrorPage404();
         }
 
         $controller = new $controller_name;
-        $action = new $action_name;
+        $action = $action_name;
 
         if(method_exists($controller, $action))
         {
@@ -51,7 +52,8 @@ class Route
         }
         else
         {
-            Route::ErrorPage404();
+            echo "Action ".$action." is not exsists!";
+            //Route::ErrorPage404();
         }
 
     }
