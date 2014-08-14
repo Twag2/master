@@ -9,9 +9,11 @@
         </div>
         <div class="form-group"><input type="text" class="form-control" placeholder="Введите адрес электронной почты"/></div>
         <div class="form-group"><input type="text" class="form-control" placeholder="Введите имя"/></div>
+        <div>
         <label class="checkbox">
             <input type="checkbox" value="remember-me"> Запомнить меня
-</label>
+        </label>
+        </div>
         <button type="submit" class="btn btn-lg btn-primary btn-block">Принять</button>
 </form>
 </div>
