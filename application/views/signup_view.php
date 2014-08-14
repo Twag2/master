@@ -1,3 +1,4 @@
+<link href="css/signup.css" rel="stylesheet">
 <div class="container">
     <form class="form-signup" action="" method="POST">
         <h2 class="form-signup-heading">Регистрация</h2>
