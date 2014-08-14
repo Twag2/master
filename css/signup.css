@@ -14,6 +14,8 @@ body {
     margin-left: 10px;
 }
 .form-signup .checkbox {
+    margin-left: 0 !important;
+    position: relative !important;
     font-weight: normal;
 }
 .form-signup .form-control {
