@@ -8,21 +8,18 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/navbar.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet">
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-</head>
 
+</head>
 <body>
-<div class="navbar navbar-inverse navbar-static-top">
-    <style>
-        .body{padding-top:70px}
-    </style>
-    <div class="container">
-        <div class="navbar-header">
-                <a class="navbar-brand" href="index.php">Twag2</a>
-        </div>
-    </div>
+<div class="navbar navbar-inverse navbar-static-top navbar">
+  <div class="container">
+                <a class="navbar-brand" href="index.php">
+                    Twag2
+                </a>
+  </div>
 </div>
 <div class="container">
     <div class="row">
@@ -37,8 +34,9 @@
             </div>
         </div>
         <div class="col-xs-6">
-            <h4>Your name</h4>
-            <h5>I'm fine</h5>
+            <h4 id="profile_nick">Nick</h4>
+            <h5 id="profile_name">Name</h5>
+            <h6 id="profile_status">I'm fine</h6>
         </div>
     </div>
     <br>
@@ -54,7 +52,7 @@
 <div class="navbar navbar-default navbar-fixed-bottom">
     <div class="container">
         <div class="navbar-center">
-            <a class="navbar-btn btn btn-default">Profile</a>
+            <a class="navbar-btn btn btn-default" href="index.php">Profile</a>
             <a class="navbar-btn btn btn-default">Feed</a>
             <a class="btn-lg btn btn-success">Action</a>
             <a class="navbar-btn btn btn-default">News</a>
