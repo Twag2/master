@@ -64,8 +64,23 @@ class Controller_Signup extends Controller
                     'name' => $name
                 );
                 $this->model = new Model_Signup();
+                if($this->model->check_data($data['nick']))
+                {
+                    if($this->model->set_data($data) == 'TRUE')
+                    {
+                        $this->view->generate('signup_view.php', 'template_view.php', 'Success');
+                    }
+                    else
+                    {
+                        $this->view->generate('signup_view.php', 'template_view.php', 'Query error');
+                    }
+                }
+                else
+                {
+                    $this->view->generate('signup_view.php', 'template_view.php', 'User with that nick already exists');
+                }
             }
         }
-        $this->view->generate('signup_view.php', 'template_view.php', $data);
+        $this->view->generate('signup_view.php', 'template_view.php');
     }
 }

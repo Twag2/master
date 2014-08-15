@@ -17,18 +17,10 @@
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Введите имя" name="first_name"/>
         </div>
-        <div class="form-group">
-            <label class="checkbox">
-                <input type="checkbox" value="remember-me" name="remember_me"> Запомнить меня
-            </label>
-        </div>
         <button type="submit" class="btn btn-lg btn-primary btn-block">Принять</button>
         <?php if(isset($data))
         {
-            foreach ($data as $key => $value)
-            {
-                echo '<h1>'.$key.':'.$value.'</h1>';
-            }
+            echo $data;
         }?>
 </form>
 </div>
