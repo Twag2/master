@@ -6,6 +6,7 @@ class Controller_Signup extends Controller
     {
         if($_SERVER['REQUEST_METHOD'] === 'POST')
         {
+            $message = '';
             if (isset($_POST['nick']))
             {
                 $nick = $_POST['nick'];
@@ -15,6 +16,7 @@ class Controller_Signup extends Controller
                 if ($nick == '')
                 {
                     unset($nick);
+                    $message = $message.'Nick is wrong ';
                 }
             }
             if (isset($_POST['password']) and isset($_POST['password_confirm']) and $_POST['password'] == $_POST['password_confirm'])
@@ -25,6 +27,7 @@ class Controller_Signup extends Controller
                 $password = trim($password);
                 if ($password =='')
                 {
+                    $message = $message.'Pass is wrong ';
                     unset($password);
                 }
             }
@@ -36,6 +39,7 @@ class Controller_Signup extends Controller
                 $email = trim($email);
                 if ($email =='')
                 {
+                    $message = $message.'Email is wrong ';
                     unset($email);
                 }
             }
@@ -47,12 +51,13 @@ class Controller_Signup extends Controller
                 $name = trim($name);
                 if ($name == '')
                 {
+                    $message = $message.'Name is wrong ';
                     unset($name);
                 }
             }
             if (empty($nick) or empty($password) or empty($email) or empty($name))
             {
-                $this->view->generate('signup_view.php', 'template_view.php', 'Some error with data');
+                $this->view->generate('signup_view.php', 'template_view.php', 'Some error with data: '.$message);
             }
             else
             {
@@ -81,6 +86,9 @@ class Controller_Signup extends Controller
                 }
             }
         }
-        $this->view->generate('signup_view.php', 'template_view.php');
+        else
+        {
+            $this->view->generate('signup_view.php', 'template_view.php');
+        }
     }
 }
