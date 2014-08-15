@@ -7,7 +7,7 @@ class Controller_Signup extends Controller
         $data = null;
         if($_SERVER['REQUEST_METHOD'] === 'POST')
         {
-            $data['nick'] = $_POST['nick'];
+            $data = $_POST;
         }
         $this->view->generate('signup_view.php', 'template_view.php', $data);
     }
