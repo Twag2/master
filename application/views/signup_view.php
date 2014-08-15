@@ -15,7 +15,7 @@
             <input type="email" class="form-control" placeholder="Введите адрес электронной почты" name="email"/>
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Введите имя" name="first_name"/>
+            <input type="text" class="form-control" placeholder="Введите имя" name="name"/>
         </div>
         <button type="submit" class="btn btn-lg btn-primary btn-block">Принять</button>
         <?php if(isset($data))

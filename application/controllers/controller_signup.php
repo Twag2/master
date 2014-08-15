@@ -55,16 +55,21 @@ class Controller_Signup extends Controller
                     unset($name);
                 }
             }
+            if(empty($nick)) $message = $message.'-N';
+            if(empty($password)) $message = $message.'-P';
+            if(empty($email)) $message = $message.'-E';
+            if(empty($name)) $message = $message.'-NM';
             if (empty($nick) or empty($password) or empty($email) or empty($name))
             {
-                $this->view->generate('signup_view.php', 'template_view.php', 'Some error with data: '.$message);
+                $message = 'Some error with data: '.$message;
+                $this->view->generate('signup_view.php', 'template_view.php', $message);
             }
             else
             {
                 $data = array
                 (
                     'nick' => $nick,
-                    'password' => $password,
+                    'password' => md5(md5($password)),
                     'email' => $email,
                     'name' => $name
                 );
