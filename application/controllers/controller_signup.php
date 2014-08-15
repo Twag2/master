@@ -64,7 +64,7 @@ class Controller_Signup extends Controller
                     'name' => $name
                 );
                 $this->model = new Model_Signup();
-                if($this->model->check_data($data['nick']))
+                if($this->model->check_data($data['nick']) > 0)
                 {
                     if($this->model->set_data($data) == 'TRUE')
                     {

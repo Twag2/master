@@ -17,6 +17,6 @@ class Model_Signup extends Model
     {
         mysql_select_db("twag2240", $this->db);
         $result = mysql_query("SELECT id FROM users WHERE nick='$value'",$this->db);
-        return empty(mysql_fetch_array($result));
+        return count(mysql_fetch_array($result));
     }
 }
