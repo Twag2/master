@@ -62,7 +62,7 @@ class Controller_Signup extends Controller
             if (empty($nick) or empty($password) or empty($email) or empty($name))
             {
                 $message = 'Some error with data: '.$message;
-                $this->view->generate('signup_view.php', 'template_view.php', $message);
+                $this->view->generate('signup_view.php', 'template_view.php', "<div class=\"alert alert-danger\">".$message.'</div>');
             }
             else
             {
@@ -78,16 +78,16 @@ class Controller_Signup extends Controller
                 {
                     if($this->model->set_data($data) == 'TRUE')
                     {
-                        $this->view->generate('signup_view.php', 'template_view.php', 'Success');
+                        $this->view->generate('signup_view.php', 'template_view.php', "<div class=\"alert alert-success\">".'Success'.'</div>');
                     }
                     else
                     {
-                        $this->view->generate('signup_view.php', 'template_view.php', 'Query error');
+                        $this->view->generate('signup_view.php', 'template_view.php', "<div class=\"alert alert-danger\">".'Query error'.'</div>');
                     }
                 }
                 else
                 {
-                    $this->view->generate('signup_view.php', 'template_view.php', 'User with that nick already exists');
+                    $this->view->generate('signup_view.php', 'template_view.php', "<div class=\"alert alert-danger\">".'User with that nick already exists'.'</div>');
                 }
             }
         }
