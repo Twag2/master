@@ -23,5 +23,9 @@
             </label>
         </div>
         <button type="submit" class="btn btn-lg btn-primary btn-block">Принять</button>
+        <?php if(isset($data['nick']))
+        {
+            echo '<h1>'.$data['nick'].'</h1>';
+        }?>
 </form>
 </div>
