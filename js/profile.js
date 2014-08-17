@@ -1,27 +1,6 @@
 $(document).ready(function()
 {
-    $("#click_settings").click(function()
-    {
-        if($("#menu_settings").hasClass('hidden'))
-        {
-            $("#menu_settings").removeClass('hidden');
-        }
-        else
-        {
-            $("#menu_settings").addClass('hidden');
-        }
-        return false;
-    });
 
-    $("#menu_settings_cancel").click(function()
-    {
-        $("#menu_settings").addClass('hidden');
-    });
-
-    $("#menu_settings_save").click(function()
-    {
-        $("#menu_settings").addClass('hidden');
-    });
 
     $("#status").click(function()
     {
@@ -31,7 +10,7 @@ $(document).ready(function()
                     '<div class="input-group">' +
                         '<input class="form-control" type="text" value="Status">' +
                         '<span class="input-group-btn">' +
-                        '<button class="btn btn-primary" id="status_change" type="submit">Change</button>' +
+                        '<button class="btn btn-primary" id="status_change" type="submit">Сменить</button>' +
                         '</span>' +
                     '</div>' +
                '</form>' +
