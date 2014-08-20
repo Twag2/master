@@ -2,10 +2,6 @@
 <div class="container">
     <form class="form-signup" action="" method="POST">
         <h2 class="form-signup-heading">Регистрация</h2>
-        <?php if(isset($data))
-        {
-            echo $data;
-        }?>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Введите никнейм" name="nick"/>
         </div>
@@ -22,6 +18,9 @@
             <input type="text" class="form-control" placeholder="Введите имя" name="name"/>
         </div>
         <button type="submit" class="btn btn-lg btn-primary btn-block">Принять</button>
-
+        <?php if(isset($data))
+        {
+            echo $data;
+        }?>
 </form>
 </div>
