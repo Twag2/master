@@ -62,7 +62,7 @@ class Controller_Signup extends Controller
             if (empty($nick) or empty($password) or empty($email) or empty($name))
             {
                 $message = 'Some error with data: '.$message;
-                $this->view->generate('signup_view.php', 'template_view.php', "<div class=\"alert alert-danger\">".$message.'</div>');
+                $this->view->generate('signup_view.php', 'template_view.php', "<div class=\"alert alert-danger\">{$message}</div>");
             }
             else
             {
